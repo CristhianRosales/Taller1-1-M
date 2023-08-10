@@ -18,9 +18,9 @@ public class Calculadora {
             switch(opc){
                 case 1: 
                     System.out.println("Binevenido a la calculadora Java para Operaciones Basicas\nDigite un valor y presione enter, digite una operacion (+, -, *, /) y presione enter, digite un valor y presione enter para obtener el resultado.\n");
-                    a = in.nextInt();
+                    a = in.nextFloat();
                     operacion = in.next().charAt(0);
-                    b = in.nextInt();
+                    b = in.nextFloat();
                     switch (operacion) {
                         case '+':
                             resultadoob = a + b;
@@ -44,15 +44,15 @@ public class Calculadora {
                     System.out.println("El resultado es: " + resultadoob);
                     break;
                 case 2: 
-                    System.out.println("Binevenido a la calculadora Java para Potencia y Raiz\nDigite la base o el radicando y presione enter, digite una operacion (^, √) y presione enter, digite el exponente o radical y presione enter para obtener el resultado.\n");
-                    c = in.nextInt();
+                    System.out.println("Binevenido a la calculadora Java para Potencia y Raiz\nDigite la base o el radicando y presione enter, digite una operacion, ^ para potencia y R para raiz y presione enter, digite el exponente o radical y presione enter para obtener el resultado.\n");
+                    c = in.nextDouble();
                     operacion = in.next().charAt(0);
-                    d = in.nextInt();
+                    d = in.nextDouble();
                     switch (operacion) {
                         case '^':
                             resultadopr = Math.pow(c, d);
                             break;
-                        case '√':
+                        case 'R':
                             if (d == 2) {
                                 resultadopr = Math.sqrt(c);
                             } else {
@@ -69,6 +69,7 @@ public class Calculadora {
                             break;
                     }
                     System.out.println("El resultado es: " + resultadopr);
+                    break;
                 case 3: System.out.println("En proceso...");
                         break;
                 case 4: System.out.println("En proceso...");
