@@ -5,11 +5,13 @@ public class Calculadora {
 
     public static void main(String[] args) {
         float a, b, resultadoob;
-        double c, d, resultadopr;
+        double c, d, e, resultadopr, resultadoft;
         char operacion;
+        String funcion="";
         int opc;
         resultadoob=0;
         resultadopr=0;
+        resultadoft=0;
         Scanner in = new Scanner(System.in);
         do{
             System.out.println("\tCalculadora\n\n1.Operaciones Basicas\n2.Potencia y Raiz\n3.Funciones Trigonometricas\n4.Porcentaje de Iva\n5.Salir");
@@ -70,8 +72,29 @@ public class Calculadora {
                     }
                     System.out.println("El resultado es: " + resultadopr);
                     break;
-                case 3: System.out.println("En proceso...");
-                        break;
+                case 3: 
+                    System.out.println("Binevenido a la calculadora Java para Funciones Trigonometricas\nDigite un angulo y presione enter, digite una funcion (sen, cos, tan) y presione enter para obtener el resultado.\n");
+                    e = in.nextDouble();
+                    funcion = in.nextLine();
+                    switch (funcion) {
+                        case "sen":
+                            resultadoft = Math.sin(e);
+                            break;
+                        case "cos":
+                            resultadoft = Math.cos(e);
+                            break;
+                        case "tan":
+                            if (Math.cos(e) == 0) {
+                                System.out.println("¡¡¡Esta tangente es indefinida!!!");
+                            }
+                            resultadoft = Math.tan(e);
+                            break;
+                        default:
+                            System.out.println("La funcion no es valida.");
+                            break;
+                    }
+                    System.out.println("El resultado es: " + resultadoft);
+                    break;
                 case 4: System.out.println("En proceso...");
                         break;
                 case 5: System.out.println("Saliendo...");
