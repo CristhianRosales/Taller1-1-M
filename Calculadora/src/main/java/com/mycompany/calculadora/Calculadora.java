@@ -3,7 +3,7 @@ import java.lang.Math;
 import java.util.Scanner;
 public class Calculadora {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         float a, b, resultadoob;
         double c, d, e, f, g, resultadopr, resultadoft;
         char operacion;
