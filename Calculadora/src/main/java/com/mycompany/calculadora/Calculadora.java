@@ -75,7 +75,6 @@ public class Calculadora {
                     System.out.println("Binevenido a la calculadora Java para Funciones Trigonometricas\nDigite un angulo y presione enter, digite una opcion de las siguientes y presione enter para obtener el resultado en radianes.\n1.Seno.\n2.Coseno.\n3.Tangente.\n");
                     a = in.nextDouble();
                     funcion = in.nextInt();
-                    a = Math.toRadians(a);
                     switch (funcion) {
                         case 1:
                             resultado = Operaciones.sen(a);
